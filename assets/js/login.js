@@ -26,7 +26,7 @@ $(function(){
             username: $('#form-reg [name=username]').val(),
             password: $('#form-reg [name=password]').val(),
         };
-        $.post('http://ajax.frontend.itheima.net/api/reguser',data,function(res){
+        $.post('/api/reguser',data,function(res){
             if(res.status !== 0) {
                 layer.msg(res.message);
             }
@@ -42,7 +42,7 @@ $(function(){
             username: $('#form-lg [name=username]').val(),
             password: $('#form-lg [name=password]').val(),
         };
-        $.post('http://ajax.frontend.itheima.net/api/login',data,function(res){
+        $.post('/api/login',data,function(res){
             if(res.status !== 0) {
                 layer.msg(res.message);
             }
